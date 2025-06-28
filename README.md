@@ -43,7 +43,9 @@ A classic chess game built with Unity, featuring a clean UI, interactive gamepla
   - Click the "Play" button in the Unity Editor to start the game.
 
 ## 📸 Screenshots
-soon
+![Screenshot 1](photo1.png)
+![Screenshot 2](photo2.png)
+![Screenshot 3](photo3.png)
 
 ## Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you'd like to change.
