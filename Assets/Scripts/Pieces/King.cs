@@ -99,7 +99,7 @@ public class King : Piece
     public bool CheckIfKingCanCastle(string direction, TeamColor echipa)
     {
        
-        foreach (var piece in FindObjectsOfType<Piece>()) 
+        foreach (var piece in FindObjectsByType<Piece>(FindObjectsSortMode.None)) 
         {
             if (board.HasPiece(piece) && piece.team != echipa) 
             {

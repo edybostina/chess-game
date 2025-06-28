@@ -17,12 +17,6 @@ public class CameraMovement : MonoBehaviour
 
     public void MoveCamera(bool isActivePlayerWhite)
     {
-    
-       
-        
-
-            
-
         Vector3 targetPosition = new Vector3(
             Camera.main.transform.position.x,
             Camera.main.transform.position.y,
@@ -30,11 +24,6 @@ public class CameraMovement : MonoBehaviour
         );
 
         Camera.main.transform.DOMove(targetPosition, 1);
-
-        
-
-        
-
         cameraFreeRotations.UpdateOriginalRotation();
 
     }

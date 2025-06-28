@@ -40,7 +40,7 @@ public class SettingsMenu : MonoBehaviour
         {
             if (filteredResolutions[i].refreshRateRatio.value >= 60)
             {
-                string option = filteredResolutions[i].width + " x " + filteredResolutions[i].height + "\n @ " + filteredResolutions[i].refreshRateRatio.value + "hz";
+                string option = filteredResolutions[i].width + " x " + filteredResolutions[i].height + "\n @ " + (int)filteredResolutions[i].refreshRateRatio.value + "hz";
                 
                 options.Add(option);
                 if (filteredResolutions[i].width == Screen.currentResolution.width && filteredResolutions[i].height == Screen.currentResolution.height && Screen.currentResolution.refreshRateRatio.value == filteredResolutions[i].refreshRateRatio.value)

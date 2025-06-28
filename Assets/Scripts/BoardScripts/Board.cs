@@ -94,7 +94,7 @@ public class Board : MonoBehaviour
                         UpdateBoardOnPieceMove(coords, selectedPiece.occupiedSquare, selectedPiece, null);
                         selectedPiece.MovePiece(coords);
                         selectedPiece.turnsSinceLastMove = 0;
-                        foreach (var pcs in FindObjectsOfType<Piece>())
+                        foreach (var pcs in FindObjectsByType<Piece>(FindObjectsSortMode.None))
                         {
                             if (pcs != selectedPiece) pcs.turnsSinceLastMove++;
                         }
@@ -113,7 +113,7 @@ public class Board : MonoBehaviour
                         UpdateBoardOnPieceMove(coords, selectedPiece.occupiedSquare, selectedPiece, null);
                         selectedPiece.MovePiece(coords);
                         selectedPiece.turnsSinceLastMove = 0;
-                        foreach (var pcs in FindObjectsOfType<Piece>())
+                        foreach (var pcs in FindObjectsByType<Piece>(FindObjectsSortMode.None))
                         {
                             if (pcs != selectedPiece) pcs.turnsSinceLastMove++;
                         }
@@ -170,7 +170,7 @@ public class Board : MonoBehaviour
         UpdateBoardOnPieceMove(coords, piece.occupiedSquare, piece, null);
         selectedPiece.MovePiece(coords);
         selectedPiece.turnsSinceLastMove = 0;
-        foreach (var pcs in FindObjectsOfType<Piece>()) 
+        foreach (var pcs in FindObjectsByType<Piece>(FindObjectsSortMode.None)) 
         {
             if (pcs != selectedPiece) pcs.turnsSinceLastMove++;
         }

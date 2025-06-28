@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Promote : MonoBehaviour
@@ -8,10 +9,11 @@ public class Promote : MonoBehaviour
     [SerializeField] private string piece;
     [SerializeField] private Board board;
     public Transform clickPosition;
-    
+    private string[] pieces = new string[] { "rook", "queen", "knight", "bishop" };
 
-    
-   
+
+
+
     public void SetMaterial(Material selectedMaterial)
     {
         materialSetter.SetSingleMaterial(selectedMaterial);
@@ -28,25 +30,11 @@ public class Promote : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     clickPosition = hit.transform;
-                    if (clickPosition.ToString() == "Rook (UnityEngine.Transform)")
+                    string name = clickPosition.ToString().Split()[0].ToLower();
+                    if (pieces.Contains(name))
                     {
-                        board.PromotePiece("rook");
+                        board.PromotePiece(name);
                     }
-                    else if (clickPosition.ToString() == "Queen (UnityEngine.Transform)")
-                    {
-                        board.PromotePiece("queen");
-                    }
-                    else if (clickPosition.ToString() == "Knight (UnityEngine.Transform)")
-                    {
-                        board.PromotePiece("knight");
-                    }
-                    else if (clickPosition.ToString() == "Bishop (UnityEngine.Transform)")
-                    {
-                        board.PromotePiece("bishop");
-                    }
-
-
-
                 }
             }
         }
